@@ -1,0 +1,23 @@
+<div class="bg-secondary w-screen h-screen pt-8">
+  <div>
+    <div class="flex justify-start items-start">
+      <img
+        src="../assets/images/logo_transparent.png"
+        alt="logo"
+        class="w-32 animate-bounceLogo"
+      />
+      <app-form-navegacao></app-form-navegacao>
+    </div>
+
+    <div
+      class="bg-indigo-950 mt-10 mx-auto p-6 w-[90%] max-w-4xl h-96 rounded-lg shadow-lg overflow-y-auto scrollbar-thin scrollbar-thumb-custom-thumb scrollbar-track-custom-track scrollbar-no-buttons pr-4"
+    >
+      <!-- Questões aqui -->
+      
+      <div *ngFor="let pergunta of perguntas">
+        <h1>oi {{pergunta}}</h1>
+      </div>
+
+    </div>
+  </div>
+</div>

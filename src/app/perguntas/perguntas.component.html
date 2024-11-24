@@ -1,0 +1,42 @@
+<div class="bg-secondary w-screen h-screen pt-8">
+  <div>
+    <div class="flex justify-start items-start">
+      <img
+        src="../assets/images/logo_transparent.png"
+        alt="logo"
+        class="w-32 animate-bounceLogo"
+      />
+      <app-form-navegacao></app-form-navegacao>
+    </div>
+
+    <div
+      class="bg-indigo-950 mt-10 mx-auto p-6 w-[90%] max-w-4xl h-96 rounded-lg shadow-lg overflow-y-auto scrollbar-thin scrollbar-thumb-custom-thumb scrollbar-track-custom-track scrollbar-no-buttons pr-4"
+    >
+      <!-- Questões aqui -->
+
+      <div
+        *ngFor="let pergunta of questoes; let i = index"
+        class="bg-indigo-950 p-4 text-gray-50"
+      >
+        <h2 class="font-bold text-lg">pergunta {{ i + 1 }}:</h2>
+        <p class="text-sm mt-2">{{ pergunta.enunciado }}</p>
+        <ul>
+          <li class="my-2">a) {{ pergunta.alternativas.a }}</li>
+          <li class="my-2">b) {{ pergunta.alternativas.b }}</li>
+          <li class="my-2">c) {{ pergunta.alternativas.c }}</li>
+          <li class="my-2">d) {{ pergunta.alternativas.d }}</li>
+        </ul>
+
+
+      </div>
+
+      <div class="bg-indigo-950 p-4 text-gray-50">
+        <h1>Respostas</h1>
+        <div
+          *ngFor="let pergunta of questoes; let i = index">
+          <h2 class="my-2">Pergunta {{ i + 1 }}: Letra {{ pergunta.alternativaCorreta }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
